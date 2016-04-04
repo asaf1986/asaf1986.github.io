@@ -1,9 +1,25 @@
 <html>
-	<head></head>
+	<head>
+		<style>
+			iframe {
+				width: 700px;
+				height: 700px;
+			}
+		</style>
+		<script>
+			if (document.cookie.indexOf('asaf') === -1) {
+				document.cookie = "asaf=smart; expires=" + "Mon, 11 Apr 2016 21:00:00 GMT; path=/"   ;
+			} else {
+				var arrOfCookies = document.cookie.split(";");
+				for (var i=0;i<arrOfCookies.length;i++) {
+					if (arrOfCookies[i].split("=")[0] === 'asaf') {
+						alert(arrOfCookies[i].split("=")[1])
+					}
+				}
+			}
+		</script>
+	</head>
 	<body>
-		<iframe src="http://www.nba.com"></iframe>
-		<iframe src="http://www.sport5.co.il"></iframe>
-		<iframe src="http://www.one.co.il"></iframe>
-		<iframe src="http://www.draft-express.com"></iframe>
+		
 	</body>
 </html>
